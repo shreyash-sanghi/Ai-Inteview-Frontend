@@ -29,7 +29,7 @@ const Modal = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onChange}>
-      <DialogContent>
+      <DialogContent className="bg-white">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>

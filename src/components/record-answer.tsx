@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useAuth } from "@clerk/clerk-react";
 import {
   CircleStop,
@@ -23,6 +22,8 @@ interface RecordAnswerProps {
   isWebCam: boolean;
   setIsWebCam: (value: boolean) => void;
 }
+
+
 
 interface AIResponse {
   ratings: number;
@@ -189,7 +190,7 @@ export const RecordAnswer = ({
   }, [results]);
 
   return (
-    <div className="w-full flex flex-col items-center gap-8 mt-4">
+    <div className="w-full flex flex-col md:flex-row gap-8 mt-4">
       {/* save modal */}
       <SaveModal
         isOpen={open}
@@ -197,8 +198,8 @@ export const RecordAnswer = ({
         onConfirm={saveUserAnswer}
         loading={loading}
       />
-
-      <div className="w-full h-[400px] md:w-96 flex flex-col items-center justify-center border p-4 bg-gray-50 rounded-md">
+       <div className="md:w-1/2 ">
+       <div className="w-full mx-auto h-[300px] max-w-96 flex flex-col items-center justify-center border p-4 bg-gray-800 rounded-md">
         {isWebCam ? (
           <WebCam
             onUserMedia={() => setIsWebCam(true)}
@@ -254,8 +255,10 @@ export const RecordAnswer = ({
           disbaled={!aiResult}
         />
       </div>
+       </div>
 
-      <div className="w-full mt-4 p-4 border rounded-md ">
+
+      <div className="md:w-1/2  p-4 border rounded-md ">
         <h2 className="text-lg font-semibold">Your Answer:</h2>
 
         <p className="text-sm mt-2 text-gray-300 whitespace-normal">
