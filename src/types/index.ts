@@ -17,7 +17,7 @@ export interface Interview {
 }
 
 export interface UserAnswer {
-  id: string;
+  _id: string;
   mockIdRef: string;
   question: string;
   correct_ans: string;
