@@ -2,7 +2,12 @@ import Marquee from "react-fast-marquee";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { MarqueImg } from "@/components/marquee-img";
+import { Link } from "react-router-dom";
+import { useAuth } from "@clerk/clerk-react";
+
 const HomePage = () => {
+    const { userId } = useAuth();
+    console.log(userId)
   return (
     <div className="flex-col w-full pb-24">
       <Container>
@@ -21,9 +26,20 @@ const HomePage = () => {
         </p>
         <div className="lg:mt-0 lg:flex-shrink-0">
             <div className="mt-12 inline-flex rounded-md shadow">
+                {userId?(<>
+                    <Link to={"/signin"}>
+                <Button type="button" className="bg-gradient-to-r from-gray-500 to-gray-200 text-transparent text-black rounded-lg font-bold text-xl">
+                   Take An Interview
+                </Button>
+                </Link>
+                </>):(<>
+                    <Link to={"/signin"}>
                 <Button type="button" className="bg-gradient-to-r from-gray-500 to-gray-200 text-transparent text-black rounded-lg font-bold text-xl">
                     Get started
                 </Button>
+                </Link>
+                </>)}
+          
             </div>
         </div>
     </div>

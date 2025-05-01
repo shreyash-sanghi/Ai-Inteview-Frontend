@@ -67,7 +67,7 @@ export const Dashboard = () => {
   }, [userId]);
   return (
     <>
-      <div className="flex w-full items-center justify-between">
+      <div className="flex py-10 w-full items-center justify-between">
         {/* headings */}
         <Headings
           title="Dashboard"

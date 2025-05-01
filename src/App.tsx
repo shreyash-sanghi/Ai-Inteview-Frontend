@@ -14,6 +14,9 @@ import { CreateEditPage } from "./routes/create-edit-page";
 import { MockLoadPage } from "./routes/mock-load-page";
 import { MockInterviewPage } from "./routes/mock-interview-page";
 import { Feedback } from "./routes/feedback";
+import Service from "./routes/service";
+import Pricing from "./routes/pricing";
+import ContactUs from "./routes/contactUs";
 
 const App = () => {
   return (
@@ -22,6 +25,9 @@ const App = () => {
         {/* public routes */}
         <Route element={<PublicLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Route>
 
         {/* authentication layout */}
