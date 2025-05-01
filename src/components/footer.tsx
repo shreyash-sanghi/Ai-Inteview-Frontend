@@ -1,27 +1,8 @@
-import React from "react";
-
-import { Link } from "react-router-dom";
 import { Container } from "@/components/container";
 import { MainRoutes } from "@/lib/helpers";
 
 
-interface FooterLinkProps {
-  to: string;
-  children: React.ReactNode;
-}
 
-const FooterLink: React.FC<FooterLinkProps> = ({ to, children }) => {
-  return (
-    <li>
-      <Link
-        to={to}
-        className="hover:underline text-gray-300 hover:text-gray-100"
-      >
-        {children}
-      </Link>
-    </li>
-  );
-};
 
 export const Footer = () => {
   return (

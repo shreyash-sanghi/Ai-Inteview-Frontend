@@ -3,7 +3,6 @@ import { InterviewPin } from "@/components/pin";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Interview } from "@/types";
 import { useAuth } from "@clerk/clerk-react";
 import { Plus } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -11,7 +10,7 @@ import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import {getMyAllInterview} from "../api/mainApi/interview-api.js"
 export const Dashboard = () => {
-  const [interviews, setInterviews] = useState<Interview | []>([]);
+  const [interviews, setInterviews] = useState([]);
   const [loading, setLoading] = useState(false);
   const { userId } = useAuth();
 
@@ -89,8 +88,8 @@ export const Dashboard = () => {
             <Skeleton key={index} className="h-24 md:h-32 rounded-md" />
           ))
         ) : interviews.length > 0 ? (
-          interviews.map((interview) => (
-            <InterviewPin key={interview?._id} interview={interview} />
+          interviews.map((interview,index) => (
+            <InterviewPin key={index} interview={interview} />
           ))
         ) : (
           <div className="md:col-span-3 w-full text-white flex flex-grow items-center justify-center h-96 flex-col">

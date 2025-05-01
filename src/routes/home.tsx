@@ -2,10 +2,6 @@ import Marquee from "react-fast-marquee";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { MarqueImg } from "@/components/marquee-img";
-import headers1 from "../assets/headers1.jpg";
-import headers2 from "../assets/headers2.jpg";
-import headers3 from "../assets/headers3.jpg";
-import backgroundImage  from "../assets/backgroundImage.avif"
 const HomePage = () => {
   return (
     <div className="flex-col w-full pb-24">
@@ -32,10 +28,10 @@ const HomePage = () => {
         </div>
     </div>
     <div className="flex items-center lg:w-1/2 gap-4 p-8 lg:p-10 xl:p-20">
-        <img src={headers1} className="w-1/2 border-gray-600 border h-[60vh] rounded-lg" alt="Tree"/>
+        <img src="/assets/img/headers1.jpg" className="w-1/2 border-gray-600 border h-[60vh] rounded-lg" alt="Tree"/>
         <div>
-            <img src={headers2} className="mb-8 border border-gray-600 h-[27vh] w-full rounded-lg" alt="Tree"/>
-            <img src={headers3} className="rounded-lg border h-[27vh] w-full border-gray-600" alt="Tree"/>
+            <img src="/assets/img/headers2.jpg" className="mb-8 border border-gray-600 h-[27vh] w-full rounded-lg" alt="Tree"/>
+            <img src="/assets/img/headers3.jpg" className="rounded-lg border h-[27vh] w-full border-gray-600" alt="Tree"/>
         </div>
     </div>
 </div>
@@ -93,7 +89,7 @@ const HomePage = () => {
     <div
       className="relative hidden lg:flex xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(/assets/img/backgroundImage.avif)`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -128,7 +124,7 @@ const HomePage = () => {
 			</div>
 			<div className="flex flex-col divide-y divide-gray-300">
 				<div className="flex px-1 py-4">
-					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src={headers1} />
+					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="/assets/img/headers1.jpg" />
 					<div className="flex flex-col flex-grow">
 						<a rel="noopener noreferrer" href="#" className="font-serif hover:underline">Aenean ac tristique lorem, ut mollis dui.</a>
 						<p className="mt-auto text-xs text-white">5 minutes ago
@@ -137,7 +133,7 @@ const HomePage = () => {
 					</div>
 				</div>
 				<div className="flex px-1 py-4">
-					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src={headers2} />
+					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="/assets/img/headers2.jpg" />
 					<div className="flex flex-col flex-grow">
 						<a rel="noopener noreferrer" href="#" className="font-serif hover:underline">Nulla consectetur efficitur.</a>
 						<p className="mt-auto text-xs text-white">14 minutes ago
@@ -146,7 +142,7 @@ const HomePage = () => {
 					</div>
 				</div>
 				<div className="flex px-1 py-4">
-					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src={headers3} />
+					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="/assets/img/headers3.jpg" />
 					<div className="flex flex-col flex-grow">
 						<a rel="noopener noreferrer" href="#" className="font-serif hover:underline">Vitae semper augue purus tincidunt libero.</a>
 						<p className="mt-auto text-xs text-white">22 minutes ago
@@ -155,7 +151,7 @@ const HomePage = () => {
 					</div>
 				</div>
 				<div className="flex px-1 py-4">
-					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src={backgroundImage} />
+					<img alt="" className="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="/assets/img/backgroundImage.avif " />
 					<div className="flex flex-col flex-grow">
 						<a rel="noopener noreferrer" href="#" className="font-serif hover:underline">Suspendisse potenti.</a>
 						<p className="mt-auto text-xs text-white">37 minutes ago
