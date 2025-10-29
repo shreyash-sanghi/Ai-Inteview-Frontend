@@ -25,7 +25,7 @@ function Pricing() {
           </h3>
           <div className="mt-4 text-center">
             <span className="text-4xl text-violet-400 font-bold">
-              $49
+              ₹49
             </span>
             <span className="text-gray-400">/session</span>
           </div>
@@ -67,7 +67,7 @@ function Pricing() {
           </h3>
           <div className="mt-4 text-center">
             <span className="text-4xl text-violet-400 font-bold">
-             $89
+             ₹89
             </span>
             <span className="text-gray-400">/session</span>
           </div>
@@ -110,7 +110,7 @@ function Pricing() {
           </h3>
           <div className="mt-4 text-center">
             <span className="text-3xl text-violet-400 font-bold">
-             $149
+             ₹149
             </span>
             <span className="text-gray-400">/session</span>
           </div>
